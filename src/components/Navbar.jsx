@@ -3,10 +3,10 @@ import logo from "../assets/images/logo.png";
 import logo2 from "../assets/images/logo-2.png";
 
 const navLinks = [
-  { text: "Informe", href: "#informe" },
-  { text: "Vet 24hrs", href: "#vet24" },
-  { text: "Documentación", href: "#documentacion" },
-  { text: "Eventos", href: "#eventos" },
+  { text: "Inicio", href: "#inicio" },
+  { text: "CuteTags", href: "#cutetags" },
+  { text: "Planes", href: "#planes" },
+  { text: "Contacto", href: "#contacto" },
 ];
 
 export default function Navbar() {
