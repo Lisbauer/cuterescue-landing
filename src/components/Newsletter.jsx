@@ -24,7 +24,7 @@ export default function Newsletter() {
   };
 
   return (
-    <section id="contacto" className="bg-white py-24 scroll-mt-[130px]">
+    <section className="bg-white py-24 scroll-mt-[130px]">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="rounded-2xl border border-black/10 shadow-lg overflow-hidden">
           <div className="grid grid-cols-1 lg:grid-cols-2">
@@ -33,7 +33,7 @@ export default function Newsletter() {
             <div className="p-8 sm:p-12 lg:p-14">
 
               <p className="text-xs sm:text-sm tracking-wide text-black/60 uppercase">
-                Suscribite para recibir novedades de Tractive
+                Suscribite para recibir novedades de Cute Rescue
               </p>
 
               <h2 className="mt-3 text-4xl sm:text-5xl font-extrabold text-black">
@@ -42,7 +42,7 @@ export default function Newsletter() {
 
               <p className="mt-4 text-[#323232] text-sm sm:text-base leading-relaxed max-w-md">
                 Enterate de las últimas novedades, consejos y descuentos.
-                Suscribite ahora y conseguí un 30% de descuento.
+                Suscribite ahora y conseguí un 30% de descuento en cualquiera de nuestros planes.
               </p>
 
               <form onSubmit={handleSubmit} className="mt-8 space-y-6">

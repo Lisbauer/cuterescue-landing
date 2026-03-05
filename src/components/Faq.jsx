@@ -7,7 +7,7 @@ const faqItems = [
   },
   {
     id: 2,
-    question: "¿La aplicación Cue Rescue es gratuita?",
+    question: "¿La aplicación Cute Rescue es gratuita?",
     answer:
       "Sí, puedes empezar con el Plan FreeMium (Gratis) que te permite registrar a tu mascota y acceder a funcionalidades básicas.",
   },
