@@ -32,7 +32,7 @@ const plans = [
   {
     id: "plus",
     title: "Plan Plus",
-    priceMain: "$39.99",
+    priceMain: "$29.99",
     priceSub: "/ mes",
     features: [
       "Todo lo del plan Premium",
@@ -57,7 +57,7 @@ function CheckItem({ children }) {
 
 export default function PricingPlans() {
   return (
-    <section className="bg-white py-24">
+    <section  id="planes" className="bg-white py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <h2 className="text-center text-3xl sm:text-4xl font-semibold text-black mb-14">
           Planes y precios
@@ -74,7 +74,7 @@ export default function PricingPlans() {
                     : "border-black/5 hover:shadow-lg"
                 }`}
             >
-              {/* Little star for featured */}
+        
               {plan.featured && (
                 <div className="absolute -top-3 left-1/2 -translate-x-1/2">
                   <div className="w-7 h-7 rounded-full bg-white border border-[#FF8C09] flex items-center justify-center shadow-sm">
@@ -83,7 +83,7 @@ export default function PricingPlans() {
                 </div>
               )}
 
-              {/* Header */}
+        
               <div className="text-center mb-8">
                 <p className="text-[#22687B] font-semibold text-lg">
                   {plan.title}
@@ -97,15 +97,15 @@ export default function PricingPlans() {
                 </div>
               </div>
 
-              {/* Features */}
+       
               <ul className="space-y-2 mb-10">
                 {plan.features.map((f) => (
                   <CheckItem key={f}>{f}</CheckItem>
                 ))}
               </ul>
 
-              {/* Button */}
-              <button
+        
+              <a href="https://cute-rescue.vercel.app/" target="blank"><button
                 type="button"
                 className={`w-full rounded-[10px] py-3 font-semibold text-sm transition
                   ${
@@ -115,7 +115,7 @@ export default function PricingPlans() {
                   }`}
               >
                 {plan.buttonText}
-              </button>
+              </button></a>
             </div>
           ))}
         </div>

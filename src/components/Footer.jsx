@@ -44,7 +44,7 @@ export default function Footer() {
 >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-14">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
-          {/* Left: big logo + QR box */}
+  
           <div className="lg:col-span-4">
             <div className="flex items-start gap-6">
               <img
@@ -55,26 +55,10 @@ export default function Footer() {
               />
             </div>
 
-            <div className="mt-10 bg-[#22687B] rounded-2xl p-5 flex items-center gap-5 max-w-md">
-              {/* Placeholder QR (use logo1 now, you replace later) */}
-              <div className="bg-white rounded-xl p-3 shrink-0">
-                <img
-                  src={logo1}
-                  alt="QR placeholder"
-                  className="w-20 h-20 object-contain"
-                  draggable="false"
-                />
-              </div>
-
-              <p className="text-white font-semibold leading-snug">
-                Escaneá el código QR <br />
-                para conseguir <br />
-                la app de CuteRescue
-              </p>
-            </div>
+        
           </div>
 
-          {/* Middle: links */}
+     
           <div className="lg:col-span-4 lg:pl-6">
             <p className="text-[#FF8C09] font-semibold text-lg mb-4">
               Arquitectura <br /> de sitio
@@ -94,7 +78,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Middle-right: company */}
+    
           <div className="lg:col-span-2">
             <p className="text-[#FF8C09] font-semibold text-lg mb-4">Empresa</p>
 
@@ -115,7 +99,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Right: brand + buttons */}
+          
           <div className="lg:col-span-2 lg:justify-self-end">
             <img
               src={logo2}
@@ -125,27 +109,27 @@ export default function Footer() {
             />
 
             <div className="mt-8 flex flex-col sm:flex-row lg:flex-col gap-3 lg:items-stretch">
-              <button
+              <a href="https://cute-rescue.vercel.app/" target="blank"><button
                 type="button"
                 className="rounded-[10px] bg-[#22687B] text-white font-semibold px-8 py-3
                            transition hover:brightness-110 active:brightness-95"
               >
                 Ingresar
-              </button>
+              </button></a>
 
-              <button
+              <a href="https://cute-rescue.vercel.app/" target="blank"><button
                 type="button"
                 className="rounded-[10px] bg-white text-[#22687B] font-semibold px-8 py-3
                            border border-[#22687B] transition
                            hover:bg-[#22687B]/5 active:bg-[#22687B]/10"
               >
                 Registrar
-              </button>
+              </button></a>
             </div>
           </div>
         </div>
 
-        {/* Social + website + copyright */}
+       
         <div className="mt-12 flex flex-col items-center gap-5">
           <div className="flex items-center gap-6">
             {socialLinks.map((s) => {

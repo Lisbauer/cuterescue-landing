@@ -7,7 +7,7 @@ export default function AppDownload() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
-          {/* Left Image */}
+        
           <div className="flex justify-center lg:justify-start">
             <img
               src={bannerImage}
@@ -17,7 +17,7 @@ export default function AppDownload() {
             />
           </div>
 
-          {/* Right Content */}
+     
           <div className="max-w-xl">
             <h2 className="text-3xl sm:text-4xl font-extrabold text-black mb-6">
               Seguridad en su bolsillo
@@ -34,7 +34,7 @@ export default function AppDownload() {
 
             <div className="space-y-8">
 
-              {/* Item 1 */}
+          
               <div className="flex items-start gap-4">
                 <div className="w-8 h-8 rounded-full bg-[#FF8C09] flex items-center justify-center text-white font-bold">
                   ›
@@ -50,7 +50,7 @@ export default function AppDownload() {
                 </div>
               </div>
 
-              {/* Item 2 */}
+     
               <div className="flex items-start gap-4">
                 <div className="w-8 h-8 rounded-full bg-[#FF8C09] flex items-center justify-center text-white font-bold">
                   ›
@@ -84,14 +84,14 @@ export default function AppDownload() {
 
             </div>
 
-            <button
+            <a href="./404Page.jsx"><button
               type="button"
               className="mt-10 bg-[#FF8C09] text-white font-bold
                          px-10 py-3 rounded-[10px] text-lg
                          transition hover:brightness-110 active:brightness-95"
             >
               Descargar Cute Rescue
-            </button>
+            </button></a>
 
           </div>
         </div>

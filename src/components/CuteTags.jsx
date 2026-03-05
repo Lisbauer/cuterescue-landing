@@ -5,12 +5,12 @@ import tag4 from "../assets/images/cutetag-4.png";
 
 export default function CuteTags() {
   return (
-    <section className="bg-white py-24">
+    <section id="cute-tag"  className="bg-white py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
-          {/* Left: Images grid */}
+         
           <div className="grid grid-cols-2 gap-6">
             {[tag1, tag2, tag3, tag4].map((img, index) => (
               <div
@@ -27,7 +27,7 @@ export default function CuteTags() {
             ))}
           </div>
 
-          {/* Right: Text content */}
+      
           <div className="max-w-xl">
             <h2 className="text-3xl sm:text-4xl font-extrabold text-black mb-6">
               Las Cute Tags
@@ -56,14 +56,14 @@ export default function CuteTags() {
               </p>
             </div>
 
-            <button
+            <a href="./404Page.jsx"><button
               type="button"
               className="mt-10 bg-[#FF8C09] text-white font-bold
                          px-10 py-3 rounded-[10px] text-lg
                          transition hover:brightness-110 active:brightness-95"
             >
               Comprar
-            </button>
+            </button></a>
           </div>
 
         </div>

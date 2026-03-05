@@ -17,12 +17,12 @@ export default function ContactSection() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // por ahora ejemplo
+
     console.log("Contact form:", formData);
   };
 
   return (
-    <section className="bg-white py-24">
+    <section id="contacto" className="bg-white py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div
           className="rounded-3xl overflow-hidden shadow-lg"
@@ -34,7 +34,7 @@ export default function ContactSection() {
         >
           <div className="p-10 sm:p-14 lg:p-16">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
-              {/* Left text */}
+     
               <div className="text-white">
                 <p className="text-xl sm:text-2xl font-light leading-snug">
                   Dudas o consulta acerca <br />
@@ -52,13 +52,12 @@ export default function ContactSection() {
                 </p>
               </div>
 
-              {/* Right form */}
               <div>
                 <form
                   onSubmit={handleSubmit}
                   className="w-full max-w-md ml-auto space-y-6"
                 >
-                  {/* Full name */}
+      
                   <div>
                     <label className="block text-white font-semibold mb-2">
                       Nombre completo
@@ -74,7 +73,7 @@ export default function ContactSection() {
                     />
                   </div>
 
-                  {/* Email */}
+           
                   <div>
                     <label className="block text-white font-semibold mb-2">
                       Correo electrónico
@@ -91,7 +90,7 @@ export default function ContactSection() {
                     />
                   </div>
 
-                  {/* Phone */}
+            
                   <div>
                     <label className="block text-white font-semibold mb-2">
                       Teléfono
@@ -106,7 +105,7 @@ export default function ContactSection() {
                     />
                   </div>
 
-                  {/* Reason */}
+             
                   <div>
                     <label className="block text-white font-semibold mb-3">
                       Motivo del mensaje:
@@ -137,7 +136,7 @@ export default function ContactSection() {
                     </div>
                   </div>
 
-                  {/* Message */}
+              
                   <div>
                     <label className="block text-white font-semibold mb-2">
                       Mensaje:
@@ -155,7 +154,7 @@ export default function ContactSection() {
                     />
                   </div>
 
-                  {/* Submit */}
+            
                   <button
                     type="submit"
                     className="w-full rounded-[10px] bg-[#FF8C09] text-white font-extrabold

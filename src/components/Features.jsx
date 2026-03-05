@@ -46,12 +46,12 @@ export default function Features() {
     <section className="bg-[#EDEDED] py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 
-        {/* Title */}
+     
         <h2 className="text-3xl sm:text-4xl font-semibold text-black mb-12">
           Características clave
         </h2>
 
-        {/* Cards */}
+      
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {featuresData.map((feature) => (
             <div
@@ -81,7 +81,7 @@ export default function Features() {
           ))}
         </div>
 
-        {/* Description */}
+      
         <p className="text-lg text-[#323232] max-w-4xl leading-relaxed">
           {selectedFeature.description}
         </p>

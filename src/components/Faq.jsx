@@ -33,7 +33,7 @@ const faqItems = [
 
 export default function Faq() {
   return (
-    <section className="bg-white py-24">
+    <section id="faq" className="bg-white py-24">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <h2 className="text-center text-3xl sm:text-4xl font-semibold text-black mb-14">
           Preguntas Frecuentes (FAQ)
@@ -45,7 +45,7 @@ export default function Faq() {
               key={item.id}
               className="relative overflow-hidden rounded-2xl bg-white border border-black/10 shadow-md"
             >
-              {/* Left color bar */}
+             
               <div className="absolute left-0 top-0 h-full w-20 bg-[#F6D59E]" />
 
               <div className="pl-28 pr-6 py-6 sm:pr-10">

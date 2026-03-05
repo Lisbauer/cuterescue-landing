@@ -10,3 +10,6 @@
 body {
   font-family: "Agrandir", sans-serif;
 }
+html {
+  scroll-behavior: smooth;
+}

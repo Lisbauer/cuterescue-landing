@@ -2,11 +2,11 @@ import dogImg from "../assets/images/cutetag-dog-image.png";
 
 export default function CuteTagDevice() {
   return (
-    <section className="bg-white pb-20">
+    <section  id="cutetags" className="bg-white pb-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="bg-white rounded-2xl shadow-lg overflow-hidden border border-black/5">
           <div className="grid grid-cols-1 lg:grid-cols-2">
-            {/* Left image */}
+           
             <div className="w-full">
               <img
                 src={dogImg}
@@ -16,7 +16,6 @@ export default function CuteTagDevice() {
               />
             </div>
 
-            {/* Right content */}
             <div className="p-8 sm:p-10 lg:p-12 flex flex-col justify-center">
               <h3 className="text-3xl sm:text-4xl font-extrabold text-black mb-6">
                 Dispositivo Cute Tag
@@ -39,14 +38,14 @@ export default function CuteTagDevice() {
                 </p>
               </div>
 
-              <button
+              <a href="./404Page.jsx"><button
                 type="button"
                 className="mt-10 w-fit bg-[#FF8C09] text-white font-bold
                            px-8 py-3 rounded-[10px] text-lg
                            transition hover:brightness-110 active:brightness-95"
               >
                 Conocé nuestros&nbsp; Cute Tag
-              </button>
+              </button></a>
             </div>
           </div>
         </div>

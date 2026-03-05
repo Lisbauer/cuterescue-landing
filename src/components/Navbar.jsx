@@ -15,35 +15,55 @@ export default function Navbar() {
   const toggleMenu = () => setIsMenuOpen((prev) => !prev);
   const closeMenu = () => setIsMenuOpen(false);
 
+  const goToSection = (e, href) => {
+    e.preventDefault();
+
+    const id = href.replace("#", "");
+    const section = document.getElementById(id);
+    if (!section) return;
+
+    const navbarHeight = 130;
+    const elementPosition = section.getBoundingClientRect().top + window.scrollY;
+
+    window.scrollTo({
+      top: elementPosition - navbarHeight,
+      behavior: "smooth",
+    });
+
+    closeMenu();
+  };
+
+  const appUrl = "https://cute-rescue.vercel.app/";
+
   return (
     <header className="bg-white h-[130px] sticky top-0 z-50 border-b border-black/5">
       <div className="mx-auto max-w-7xl h-full px-4 sm:px-6 lg:px-8">
         <div className="h-full flex items-center justify-between">
-          {/* Left: logos */}
+       
           <div className="flex items-center gap-3 shrink-0">
             <img
               src={logo}
               alt="CuteRescue logo"
-              className="h-16 sm:h-27 w-auto object-contain"
+              className="h-16 sm:h-20 w-auto object-contain"
               draggable="false"
             />
             <img
               src={logo2}
               alt="CuteRescue logo 2"
-              className="h-16 sm:h-27 w-auto object-contain"
+              className="h-16 sm:h-20 w-auto object-contain"
               draggable="false"
             />
           </div>
 
-          {/* Center: links (desktop) */}
+        
           <nav className="hidden lg:flex items-center">
             <ul className="flex items-center gap-10 bg-[#F5F5F5] rounded-[10px] px-6 py-3">
               {navLinks.map((link) => (
                 <li key={link.text}>
                   <a
                     href={link.href}
-                    className="text-[#22687B]  text-[22px] transition
-                               hover:opacity-80 hover:-translate-y-[1px] active:translate-y-0"
+                    onClick={(e) => goToSection(e, link.href)}
+                    className="text-[#22687B] text-[22px] transition hover:opacity-80 hover:-translate-y-[1px]"
                   >
                     {link.text}
                   </a>
@@ -52,36 +72,28 @@ export default function Navbar() {
             </ul>
           </nav>
 
-          {/* Right: buttons (desktop) */}
+       
           <div className="hidden lg:flex items-center gap-3 shrink-0">
-            <button
-              type="button"
-              className="rounded-[10px] bg-[#22687B] text-white px-7 py-2 text-[19px] font-semibold
-                         transition hover:brightness-110 active:brightness-95"
-            >
-              Ingresar
-            </button>
+            <a href={appUrl} target="_blank" rel="noreferrer">
+              <button className="rounded-[10px] bg-[#22687B] text-white px-7 py-2 text-[19px] font-semibold transition hover:brightness-110">
+                Ingresar
+              </button>
+            </a>
 
-            <button
-              type="button"
-              className="rounded-[10px] bg-white text-[#22687B] px-7 py-2 text-[19px] font-semibold
-                         border border-[#22687B] transition
-                         hover:bg-[#22687B]/5 active:bg-[#22687B]/10"
-            >
-              Registrar
-            </button>
+            <a href={appUrl} target="_blank" rel="noreferrer">
+              <button className="rounded-[10px] bg-white text-[#22687B] px-7 py-2 text-[19px] font-semibold border border-[#22687B] transition hover:bg-[#22687B]/5">
+                Registrar
+              </button>
+            </a>
           </div>
 
-          {/* Mobile/tablet: burger */}
+       
           <button
-            type="button"
             onClick={toggleMenu}
-            className="lg:hidden inline-flex items-center justify-center rounded-[10px]
-                       border border-black/10 px-3 py-2 transition hover:bg-black/5"
+            className="lg:hidden inline-flex items-center justify-center rounded-[10px] border border-black/10 px-3 py-2"
             aria-label={isMenuOpen ? "Cerrar menú" : "Abrir menú"}
             aria-expanded={isMenuOpen}
           >
-            {/* Simple burger/X */}
             <span className="relative block h-5 w-6">
               <span
                 className={`absolute left-0 top-1 block h-[2px] w-6 bg-[#22687B] transition ${
@@ -103,7 +115,7 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile/tablet dropdown */}
+ 
       {isMenuOpen && (
         <div className="lg:hidden border-t border-black/5 bg-white">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 py-4 space-y-4">
@@ -113,9 +125,8 @@ export default function Navbar() {
                   <li key={link.text}>
                     <a
                       href={link.href}
-                      onClick={closeMenu}
-                      className="block text-[#22687B] font-medium transition
-                                 hover:opacity-80 hover:translate-x-[2px]"
+                      onClick={(e) => goToSection(e, link.href)}
+                      className="block text-[#22687B] font-medium transition hover:opacity-80"
                     >
                       {link.text}
                     </a>
@@ -124,23 +135,39 @@ export default function Navbar() {
               </ul>
             </div>
 
-            <div className="grid grid-cols-2 gap-3">
-              <button
-                type="button"
-                className="rounded-[10px] bg-[#22687B] text-white px-4 py-3 text-sm font-semibold
-                           transition hover:brightness-110 active:brightness-95"
+       
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <a
+                href={appUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="w-full"
               >
-                Ingresar
-              </button>
+                <button
+                  type="button"
+                  className="w-full text-center rounded-[10px] bg-[#22687B] text-white
+                             px-4 py-3 text-sm font-semibold
+                             transition hover:brightness-110 active:brightness-95"
+                >
+                  Ingresar
+                </button>
+              </a>
 
-              <button
-                type="button"
-                className="rounded-[10px] bg-white text-[#22687B] px-4 py-3 text-sm font-semibold
-                           border border-[#22687B] transition
-                           hover:bg-[#22687B]/5 active:bg-[#22687B]/10"
+              <a
+                href={appUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="w-full"
               >
-                Registrar
-              </button>
+                <button
+                  type="button"
+                  className="w-full text-center rounded-[10px] bg-white text-[#22687B]
+                             px-4 py-3 text-sm font-semibold border border-[#22687B]
+                             transition hover:bg-[#22687B]/5 active:bg-[#22687B]/10"
+                >
+                  Registrar
+                </button>
+              </a>
             </div>
           </div>
         </div>
